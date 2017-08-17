@@ -16,6 +16,8 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private JPanelFacil jpf = new JPanelFacil();
     private JPanelIntermediario jpi = new JPanelIntermediario();
     private JPanelDificil jpd = new JPanelDificil();
+    // daqui ate ali
+    private JPanelTabuleiro jpt = new JPanelTabuleiro();
 
     /**
      * Creates new form JogoMemoriaPrincipal
@@ -119,20 +121,20 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
         String op = (String) cmb_Nivel.getSelectedItem();
         if (op.equals("Fácil")) {
-            sppPrincipal.setRightComponent(jpf);
-            this.setSize(800, 800);
+            jpt.getSPPTabuleiro().setLeftComponent(jpf);
         }
         if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) {
-            sppPrincipal.setRightComponent(jpi);
-            this.setSize(900, 900);
+            jpt.getSPPTabuleiro().setLeftComponent(jpi);
+    
         }
         
 
         if (op.equals("Difícil")) {
-            sppPrincipal.setRightComponent(jpd);
-        this.setSize(1100, 900);
+           jpt.getSPPTabuleiro().setLeftComponent(jpd);
+    
         }
         
+        sppPrincipal.setRightComponent(jpt);
         this.repaint();
 
     }//GEN-LAST:event_btnIniciarActionPerformed
