@@ -50,6 +50,8 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
         sppPrincipal.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        pnlPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+
         btnIniciar.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         btnIniciar.setText("Iniciar");
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +105,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
         pnlPrincipal2.setLayout(new java.awt.BorderLayout());
 
+        lblLogo.setBackground(new java.awt.Color(255, 255, 255));
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/wdJogoDaMemoria.png"))); // NOI18N
         pnlPrincipal2.add(lblLogo, java.awt.BorderLayout.CENTER);
 
