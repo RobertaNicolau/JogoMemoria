@@ -5,6 +5,8 @@
  */
 package jogomemoria.gui;
 
+import java.net.URL;
+
 /**
  *
  * @author Aluno
@@ -16,6 +18,10 @@ public class JPanelFacil extends javax.swing.JPanel {
      */
     public JPanelFacil() {
         initComponents();
+    }
+
+    JPanelFacil(URL resource) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
