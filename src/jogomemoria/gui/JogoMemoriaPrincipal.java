@@ -13,17 +13,15 @@ import java.awt.Component;
  */
 public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
-    
     private JPanelFacil jpf = new JPanelFacil();
     private JPanelIntermediario jpi = new JPanelIntermediario();
     private JPanelDificil jpd = new JPanelDificil();
 
-    
-    
     /**
      * Creates new form JogoMemoriaPrincipal
      */
     public JogoMemoriaPrincipal() {
+
         initComponents();
     }
 
@@ -103,6 +101,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
         sppPrincipal.setLeftComponent(pnlPrincipal);
 
+        pnlPrincipal2.setBackground(new java.awt.Color(255, 255, 255));
         pnlPrincipal2.setLayout(new java.awt.BorderLayout());
 
         lblLogo.setBackground(new java.awt.Color(255, 255, 255));
@@ -118,18 +117,24 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-            String op = (String) cmb_Nivel.getSelectedItem();
-            if (op.equals("Fácil")) {
-                sppPrincipal.setRightComponent(jpf);
-                this.setSize(800, 800);
-            }
-            if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) 
-                sppPrincipal.setRightComponent(jpi);
-            if (op.equals("Difícil")) 
-                sppPrincipal.setRightComponent(jpd);
-            
-            this.repaint();
-            
+        String op = (String) cmb_Nivel.getSelectedItem();
+        if (op.equals("Fácil")) {
+            sppPrincipal.setRightComponent(jpf);
+            this.setSize(800, 800);
+        }
+        if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) {
+            sppPrincipal.setRightComponent(jpi);
+            this.setSize(900, 900);
+        }
+        
+
+        if (op.equals("Difícil")) {
+            sppPrincipal.setRightComponent(jpd);
+        this.setSize(1100, 900);
+        }
+        
+        this.repaint();
+
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     /**
