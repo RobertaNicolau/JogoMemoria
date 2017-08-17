@@ -16,25 +16,23 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblImg7" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="lblImg13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblImg19" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblImg1" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblImg13" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblImg19" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblImg7" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblImg1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="lblImg2" alignment="1" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="lblImg8" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblImg14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblImg8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblImg14" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblImg2" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -64,11 +62,6 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblImg10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="lblImg11" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblImg16" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblImg22" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -81,24 +74,38 @@
                           <Component id="lblImg35" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblImg4" min="-2" pref="90" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="lblImg5" min="-2" pref="90" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="lblImg28" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblImg34" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="lblImg4" max="32767" attributes="0"/>
+                          <Component id="lblImg10" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblImg11" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblImg6" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg18" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg24" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg12" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg30" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg36" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblImg18" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg24" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg30" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg36" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg12" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblImg6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -106,22 +113,24 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblImg2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblImg3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblImg4" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblImg5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="lblImg1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lblImg6" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblImg5" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblImg6" min="-2" pref="85" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblImg8" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblImg7" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -151,8 +160,8 @@
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblImg25" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="lblImg26" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblImg26" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblImg27" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblImg28" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblImg29" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -160,15 +169,17 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblImg31" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblImg32" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg33" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg34" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg35" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblImg36" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblImg31" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblImg33" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblImg34" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblImg35" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblImg36" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -180,6 +191,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg1MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg2">
       <Properties>
@@ -187,6 +201,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg2MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg3">
       <Properties>
@@ -194,6 +211,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg3MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg4">
       <Properties>
@@ -201,6 +221,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg4MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg5">
       <Properties>
@@ -208,6 +231,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg5MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg6">
       <Properties>
@@ -215,6 +241,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg6MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg7">
       <Properties>
@@ -222,6 +251,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg7MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg8">
       <Properties>
@@ -229,6 +261,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg8MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg9">
       <Properties>
@@ -236,6 +271,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg9MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg10">
       <Properties>
@@ -243,6 +281,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg10MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg11">
       <Properties>
@@ -250,6 +291,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg11MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg12">
       <Properties>
@@ -257,6 +301,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg12MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg18">
       <Properties>
@@ -264,6 +311,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg18MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg13">
       <Properties>
@@ -271,6 +321,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg13MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg14">
       <Properties>
@@ -278,6 +331,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg14MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg15">
       <Properties>
@@ -285,6 +341,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg15MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg16">
       <Properties>
@@ -292,6 +351,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg16MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg17">
       <Properties>
@@ -299,6 +361,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg17MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg23">
       <Properties>
@@ -306,6 +371,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg23MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg24">
       <Properties>
@@ -313,6 +381,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg24MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg22">
       <Properties>
@@ -320,6 +391,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg22MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg21">
       <Properties>
@@ -327,6 +401,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg21MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg20">
       <Properties>
@@ -334,6 +411,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg20MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg19">
       <Properties>
@@ -341,6 +421,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg19MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg25">
       <Properties>
@@ -348,6 +431,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg25MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg26">
       <Properties>
@@ -355,6 +441,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg26MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg27">
       <Properties>
@@ -362,6 +451,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg27MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg28">
       <Properties>
@@ -369,6 +461,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg28MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg29">
       <Properties>
@@ -376,6 +471,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg29MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg30">
       <Properties>
@@ -383,6 +481,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg30MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg36">
       <Properties>
@@ -390,6 +491,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg36MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg35">
       <Properties>
@@ -397,6 +501,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg35MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg34">
       <Properties>
@@ -404,6 +511,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg34MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg33">
       <Properties>
@@ -411,6 +521,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg33MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg32">
       <Properties>
@@ -418,6 +531,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblImg32KeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImg31">
       <Properties>
@@ -425,6 +541,9 @@
           <Image iconType="3" name="/jogomemoria/gui/img/wd1.jpg"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblImg31MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
