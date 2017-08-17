@@ -5,12 +5,21 @@
  */
 package jogomemoria.gui;
 
+import java.awt.Component;
+
 /**
  *
  * @author Aluno
  */
 public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
+    
+    private JPanelFacil jpf = new JPanelFacil();
+    private JPanelIntermediario jpi = new JPanelIntermediario();
+    private JPanelDificil jpd = new JPanelDificil();
+
+    
+    
     /**
      * Creates new form JogoMemoriaPrincipal
      */
@@ -30,7 +39,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         sppPrincipal = new javax.swing.JSplitPane();
         pnlPrincipal = new javax.swing.JPanel();
         btnIniciar = new javax.swing.JToggleButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        cmb_Nivel = new javax.swing.JComboBox();
         lblNivel = new javax.swing.JLabel();
         spnTempo = new javax.swing.JSpinner();
         lblTempo = new javax.swing.JLabel();
@@ -49,12 +58,8 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
+        cmb_Nivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fácil", "Intermediário", "Difícil" }));
+        cmb_Nivel.setAction(btnIniciar.getAction());
 
         lblNivel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblNivel.setText("Nível: ");
@@ -76,7 +81,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmb_Nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnIniciar)
                 .addContainerGap(111, Short.MAX_VALUE))
@@ -89,7 +94,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                     .addComponent(lblTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNivel)
                     .addComponent(spnTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(cmb_Nivel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34))
         );
@@ -108,15 +113,21 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   
-    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-     
-    }//GEN-LAST:event_btnIniciarActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-       JPanelFacil jpanelfacil = new JPanelFacil();
-        
-        jpanelfacil.setVisible(true);    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
+            String op = (String) cmb_Nivel.getSelectedItem();
+            if (op.equals("Fácil")) {
+                sppPrincipal.setRightComponent(jpf);
+                this.setSize(800, 800);
+            }
+            if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) 
+                sppPrincipal.setRightComponent(jpi);
+            if (op.equals("Difícil")) 
+                sppPrincipal.setRightComponent(jpd);
+            
+            this.repaint();
+            
+    }//GEN-LAST:event_btnIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,7 +166,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnIniciar;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox cmb_Nivel;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblNivel;
     private javax.swing.JLabel lblTempo;
