@@ -39,7 +39,10 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
+        jPanelFacil1.setBackground(new java.awt.Color(255, 255, 255));
         sppTabuleiro.setLeftComponent(jPanelFacil1);
+
+        jPanelInfos2.setBackground(new java.awt.Color(255, 255, 255));
         sppTabuleiro.setRightComponent(jPanelInfos2);
 
         add(sppTabuleiro, java.awt.BorderLayout.CENTER);

@@ -29,6 +29,8 @@ public class JPanelInfos extends javax.swing.JPanel {
 
         jTextField1 = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 204));
+
         jTextField1.setText("Recordes");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

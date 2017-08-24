@@ -5,7 +5,6 @@
  */
 package jogomemoria.gui;
 
-import java.awt.Component;
 
 /**
  *

@@ -55,7 +55,7 @@ public class JPanelFacil extends javax.swing.JPanel {
 
         jLabel18.setText("jLabel18");
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(506, 509));
         setLayout(new java.awt.GridLayout(4, 4));
 

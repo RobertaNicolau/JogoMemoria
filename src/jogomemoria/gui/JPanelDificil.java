@@ -82,6 +82,8 @@ public class JPanelDificil extends javax.swing.JPanel {
         lblImg45 = new javax.swing.JLabel();
         lblImg54 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         lblImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd1.jpg"))); // NOI18N
         lblImg1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
