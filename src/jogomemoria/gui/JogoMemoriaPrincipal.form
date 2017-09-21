@@ -106,6 +106,9 @@
                   <Connection component="btnIniciar" name="getAction" type="method"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmb_NivelActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNivel">
               <Properties>
@@ -121,6 +124,9 @@
                   <Dimension value="[47, 26]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="spnTempoAncestorAdded"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblTempo">
               <Properties>

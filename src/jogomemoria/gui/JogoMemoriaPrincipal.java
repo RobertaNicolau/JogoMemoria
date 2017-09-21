@@ -5,6 +5,7 @@
  */
 package jogomemoria.gui;
 
+import jogomemoria.control.JogoMemoriaCtrl;
 
 /**
  *
@@ -17,6 +18,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private JPanelDificil jpd = new JPanelDificil();
     // daqui ate ali
     private JPanelTabuleiro jpt = new JPanelTabuleiro();
+    private JogoMemoriaCtrl controle = new JogoMemoriaCtrl();
 
     /**
      * Creates new form JogoMemoriaPrincipal
@@ -61,11 +63,25 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
         cmb_Nivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fácil", "Intermediário", "Difícil" }));
         cmb_Nivel.setAction(btnIniciar.getAction());
+        cmb_Nivel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_NivelActionPerformed(evt);
+            }
+        });
 
         lblNivel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblNivel.setText("Nível: ");
 
         spnTempo.setMinimumSize(new java.awt.Dimension(47, 26));
+        spnTempo.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                spnTempoAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         lblTempo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTempo.setText("Tempo Limite:");
@@ -118,25 +134,33 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
+        
+       // controle.iniciarPartida(int nivel, int tem);
+        
         String op = (String) cmb_Nivel.getSelectedItem();
         if (op.equals("Fácil")) {
             jpt.getSPPTabuleiro().setLeftComponent(jpf);
         }
         if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) {
             jpt.getSPPTabuleiro().setLeftComponent(jpi);
-    
         }
-        
 
         if (op.equals("Difícil")) {
-           jpt.getSPPTabuleiro().setLeftComponent(jpd);
-    
+            jpt.getSPPTabuleiro().setLeftComponent(jpd);
         }
-        
+
         sppPrincipal.setRightComponent(jpt);
         this.repaint();
 
     }//GEN-LAST:event_btnIniciarActionPerformed
+
+    private void cmb_NivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_NivelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmb_NivelActionPerformed
+
+    private void spnTempoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_spnTempoAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_spnTempoAncestorAdded
 
     /**
      * @param args the command line arguments
