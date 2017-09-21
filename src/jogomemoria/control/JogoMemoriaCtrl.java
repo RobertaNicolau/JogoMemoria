@@ -50,6 +50,8 @@ public class JogoMemoriaCtrl {
     private int tempoLimite;      //Tempo limite para a partida em segundos (minutos * 60)
     private int pontuacaoAtual;   //Pontuação da partida atual
     private int nivelAtual;       //Nível da partida atual
+    private int linhaMax;
+    private int colunaMax;
     private int tabRecordes[][] = {{0, 0, 0}, //Quadro de melhores pontuações por nível (Recordes)
     {0, 0, 0}, //Linha = Nível e Coluna = Ouro, prata ou bronze.
     {0, 0, 0}};
@@ -58,7 +60,7 @@ public class JogoMemoriaCtrl {
     private int qtdImgsPartida; //Quantidade de imgens usadas na partida. Controla o uso de células do vetor imgsPartida conforme o nível da partida atual.           
     private int tabuleiro[][] = new int[MAX_LIN_DIFICIL][MAX_COL_DIFICIL]; //Matriz que implementa o tabuleiro do jogo onde as imagens estão distribuidas. Considera o tamanho máximo possível de ser usado que é para o nível difícil. Cada célula contém um número referente à imagem que ocupará a posição.
     private int tabControle[][] = new int[MAX_LIN_DIFICIL][MAX_COL_DIFICIL]; //Será usada em conjunto com a matriz tabuleiro[][]. Implementa um controle das jogadas já realizadas e acertadas. Ajuda a atulizar a tela indicando que imagem estará virada (Valor 0 na célula) e que imagem estará aberta (Valor 1). Considera o tamanho máximo possível de ser usado que é para o nível difícil.
-    
+
     /* ----------------------- MÉTODOS -----------------------*/
     /**
      * Construtor para a classe
@@ -97,29 +99,32 @@ public class JogoMemoriaCtrl {
         tempoLimite = tempoLimMinutos * 60;
 
         acertosPartida = 0;
-        
-        if (nivel ==  FACIL) {
+
+        if (nivel == FACIL) {
             nivelAtual = FACIL;
             qtdImgsPartida = QTDE_IMGS_FACIL;
-        }else{
-              if (nivel == INTERMEDIARIO) {
-                  nivelAtual = INTERMEDIARIO;
-                  qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
-              }else{
-                    if (nivel == DIFICIL) {
-                        nivelAtual = DIFICIL;
-                        qtdImgsPartida = QTDE_IMGS_DIFICIL;
-                   } 
-               }   
-         }
-        
+            colunaMax = MAX_COL_FACIL;
+        } else {
+            if (nivel == INTERMEDIARIO) {
+                nivelAtual = INTERMEDIARIO;
+                qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
+                colunaMax = MAX_COL_INTERMEDIARIO;
+            } else {
+                if (nivel == DIFICIL) {
+                    nivelAtual = DIFICIL;
+                    qtdImgsPartida = QTDE_IMGS_DIFICIL;
+                    colunaMax = MAX_COL_DIFICIL;
+                }
+            }
+        }
+
         sortearImagensPartida();
-        
-        
+
         preencherTabuleiro();
-        
+
         limparTabuleiros();
     }
+
     /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
      que precisam ter seus valores ajustados no ínício de cada partida:
      - O jogo deve ser sinalizado como iniciado.
@@ -131,20 +136,20 @@ public class JogoMemoriaCtrl {
      - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
      - Zerar todo o tabuleiro de controle.
      */
-    
-    
-        //obtem um nº sorteado e valido no espaço de inicio ate o fim
-       private int obterNumSorteado( int inicio, int fim){
-    
-          int n =  INDEFINIDO; 
-           
-           if (fim >= inicio && inicio >= 0){
-               n = inicio+(int)(Math.random()*((fim-inicio)+1));
 
-           }
-           
-           return n;
-       }
+    //obtem um nº sorteado e valido no espaço de inicio ate o fim
+    private int obterNumSorteado(int inicio, int fim) {
+
+        int n = INDEFINIDO;
+
+        if (fim >= inicio && inicio >= 0) {
+            n = inicio + (int) (Math.random() * ((fim - inicio) + 1));
+
+        }
+
+        return n;
+    }
+
     /**
      * Realiza o sorteio de imagens para a partida, conforme índices de 1 até
      * MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia o
@@ -152,7 +157,7 @@ public class JogoMemoriaCtrl {
      * necessárias para a partida (qtdImgsPartida)
      */
     private void sortearImagensPartida() {
-                /*
+        /*
          ATIVIDADE #3.
          - Limpe o vetor de imagens da partida pois ele pode conter imagens de
          partidas anteriores.
@@ -173,22 +178,22 @@ public class JogoMemoriaCtrl {
          preenchendo ele. Se X já estiver presente você deve sortear outro número e o proessose repete.
 
          */
-        
+
         limparImgsPartida();
-        
+
         int qtdeSorteadas = 0;
         boolean achou = false;
-        
-        while(qtdeSorteadas < qtdImgsPartida){
-            int i = obterNumSorteado(1,QTDE_IMAGENS_DISPONIVEIS);
+
+        while (qtdeSorteadas < qtdImgsPartida) {
+            int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
             achou = false;
-            for(int k = 0; k < qtdeSorteadas; k++){
-                if(imgsPartida[k] == 1){
+            for (int k = 0; k < qtdeSorteadas; k++) {
+                if (imgsPartida[k] == 1) {
                     achou = true;
-                    break;                  
+                    break;
                 }
             }
-            if(!achou){
+            if (!achou) {
                 imgsPartida[qtdImgsPartida] = i;
                 qtdImgsPartida++;
             }
@@ -203,10 +208,10 @@ public class JogoMemoriaCtrl {
     private void limparImgsPartida() {
         //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
         //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
-        
-        for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++){
-            imgsPartida[i] = 0;            
-        }                
+
+        for (int i = 0; i < MAX_IMAGENS_PARTIDA; i++) {
+            imgsPartida[i] = 0;
+        }
     }
 
     /**
@@ -230,7 +235,6 @@ public class JogoMemoriaCtrl {
          você está processando. Ou seja você deve processa do primeiro até o último elemento.
  
          */
-        
 
     }
 
@@ -243,15 +247,14 @@ public class JogoMemoriaCtrl {
         //ATIVIDADE #4.1.
         //implementar laços para percorrer as células das matrizes 
         //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
-        
-        for (int l = 0; l<MAX_LIN_DIFICIL;l++){
-            for(int c =0; c<MAX_COL_DIFICIL; c++){
+
+        for (int l = 0; l < MAX_LIN_DIFICIL; l++) {
+            for (int c = 0; c < MAX_COL_DIFICIL; c++) {
                 tabuleiro[l][c] = 0;
                 tabControle[l][c] = 0;
-            }      
+            }
         }
-        
-        
+
     }
 
     /**
@@ -268,7 +271,22 @@ public class JogoMemoriaCtrl {
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
         int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-
+        if (pt1.getIdImagem() == pt2.getIdImagem()) {
+            if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
+                    && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
+                int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];
+                int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
+                if ((vrControle1 == 0) && (vrControle2 == 0)) {
+                    resultado = JOGADA_CERTA;
+                    pontuacaoAtual++;
+                    tabControle[pt1.getLinha()][pt1.getColuna()] = 1;
+                    tabControle[pt2.getLinha()][pt2.getColuna()] = 1;
+                } else {
+                    resultado = JOGADA_ERRADA;
+                }
+            }
+        }
+        return resultado;
         /*
          ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
          com base nas duas peças de tabuleiro recebidas como parâmetro.
@@ -289,10 +307,10 @@ public class JogoMemoriaCtrl {
          d) verifique se o jogo finalizou (acertou tudo ou terminou ot empo)
        
          */
-        return resultado;  //Esta linha irá retornar o resultado da operação
         // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
         //Na tela teremos condições de fazer ela se comportar 
         //em função do valor que este método retornar. 
+
     }
 
     /**
