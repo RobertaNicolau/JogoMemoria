@@ -29,7 +29,7 @@ public class JogoMemoriaCtrl {
     public static final int MAX_IMAGENS_PARTIDA = 18; //Máx. de imagens usadas nas partidas
     public static final int QTDE_IMAGENS_DISPONIVEIS = 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
 
-    public static final int QTDE_IMGS_FACIL = 16; //Referência para a qtde de imagens do tabuleiro para do nível Fácil
+    public static final int QTDE_IMGS_FACIL = 8; //Referência para a qtde de imagens do tabuleiro para do nível Fácil
     public static final int QTDE_PECAS_TAB_FACIL = 16; //Referência para a qtde de peças do tabuleiro para o nível Fácil
     public static final int MAX_COL_FACIL = 4;  //Qtde de colunas no tabuleiro para o nível Fácil
     public static final int MAX_LIN_FACIL = 4;  //Qtde de linhas no tabuleiro para o nível Fácil      
@@ -39,7 +39,7 @@ public class JogoMemoriaCtrl {
     public static final int MAX_COL_INTERMEDIARIO = 6; //Qtde de colunas no tabuleiro para o nível Intermediário
     public static final int MAX_LIN_INTERMEDIARIO = 6; //Qtde de linhas no tabuleiro para o nível Intermediário    
 
-    public static final int QTDE_IMGS_DIFICIL = 54; //Referência para a qtde de imagens do tabuleiro para do nível dificil   
+    public static final int QTDE_IMGS_DIFICIL = 18; //Referência para a qtde de imagens do tabuleiro para do nível dificil   
     public static final int QTDE_PECAS_TAB_DIFICIL = 54; //Referência para a qtde de peças do tabuleiro para o nível Difícil
     public static final int MAX_COL_DIFICIL = 9; //Qtde de colunas no tabuleiro para o nível Difícil
     public static final int MAX_LIN_DIFICIL = 6; //Qtde de linhas no tabuleiro para o nível Difícil

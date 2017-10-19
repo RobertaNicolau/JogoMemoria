@@ -5,7 +5,9 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.ImageIcon;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.model.PecaTabuleiro;
 
 /**
  *
@@ -18,7 +20,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private JPanelDificil jpd = new JPanelDificil();
     // daqui ate ali
     private JPanelTabuleiro jpt = new JPanelTabuleiro();
-    private JogoMemoriaCtrl controle = new JogoMemoriaCtrl();
+    private JogoMemoriaCtrl controle;
 
     /**
      * Creates new form JogoMemoriaPrincipal
@@ -26,6 +28,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     public JogoMemoriaPrincipal() {
 
         initComponents();
+        controle = new JogoMemoriaCtrl();
     }
 
     /**
@@ -134,23 +137,25 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        
-       // controle.iniciarPartida(int nivel, int tem);
-        
+
+        // controle.iniciarPartida(int nivel, int tem);
+        int nivelSelec = 0;
         String op = (String) cmb_Nivel.getSelectedItem();
+
         if (op.equals("Fácil")) {
-            jpt.getSPPTabuleiro().setLeftComponent(jpf);
+            nivelSelec = controle.FACIL;
         }
         if (((String) cmb_Nivel.getSelectedItem()).equals("Intermediário")) {
-            jpt.getSPPTabuleiro().setLeftComponent(jpi);
+            nivelSelec = controle.INTERMEDIARIO;
         }
-
         if (op.equals("Difícil")) {
-            jpt.getSPPTabuleiro().setLeftComponent(jpd);
+            nivelSelec = controle.DIFICIL;
         }
 
-        sppPrincipal.setRightComponent(jpt);
-        this.repaint();
+        int tempoL = (((Integer) spnTempo.getValue()).intValue());
+
+        controle.iniciarPartida(nivelSelec, tempoL);
+        mostrarTabulerio(true);
 
     }//GEN-LAST:event_btnIniciarActionPerformed
 
@@ -195,6 +200,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 new JogoMemoriaPrincipal().setVisible(true);
             }
         });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -208,4 +214,60 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private javax.swing.JSpinner spnTempo;
     private javax.swing.JSplitPane sppPrincipal;
     // End of variables declaration//GEN-END:variables
+
+    public void mostrarTabulerio(boolean inicioJogo) {
+
+        PecaTabuleiro pctb[][] = controle.getTabuleiro();
+        int idImg;
+
+        ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wdJogoDaMemoria.png"));
+
+        if (controle.getNivelAtual() == controle.FACIL) {
+
+            if (inicioJogo || pctb[0][0].isVirado()) {
+                idImg = pctb[0][0].getIdImagem();
+                ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + "."));
+                (jpf.getLblImg00()).setIcon(img00);
+            } else {
+                (jpf.getLblImg00()).setIcon(imgDuvida);
+            }
+            
+            if (inicioJogo || pctb[0][1].isVirado()) {
+                idImg = pctb[0][1].getIdImagem();
+                ImageIcon img01 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + "."));
+                (jpf.getLblImg01()).setIcon(img01);
+            } else {
+                (jpf.getLblImg01()).setIcon(imgDuvida);
+            }
+            
+            
+            if (inicioJogo || pctb[0][2].isVirado()) {
+                idImg = pctb[0][2].getIdImagem();
+                ImageIcon img02 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + "."));
+                (jpf.getLblImg02()).setIcon(img02);
+            } else {
+                (jpf.getLblImg02()).setIcon(imgDuvida);
+            }
+            
+            
+            jpt.getSPPTabuleiro().setLeftComponent(jpf);
+        }
+        
+        
+        
+        
+        
+        
+        if (controle.getNivelAtual() == controle.INTERMEDIARIO) {
+            jpt.getSPPTabuleiro().setLeftComponent(jpi);
+
+        }
+
+        if (controle.getNivelAtual() == controle.DIFICIL) {
+            jpt.getSPPTabuleiro().setLeftComponent(jpd);
+
+        }
+        sppPrincipal.setRightComponent(jpt);
+        this.repaint();
+    }
 }
