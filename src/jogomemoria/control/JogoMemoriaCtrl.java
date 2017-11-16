@@ -104,12 +104,14 @@ public class JogoMemoriaCtrl {
         if (nivel == FACIL) {
             setNivelAtual(FACIL);
             qtdImgsPartida = QTDE_IMGS_FACIL;
+            linhaMax = MAX_LIN_FACIL;
             colunaMax = MAX_COL_FACIL;
             qtdPecasPorImg = 2;
         } else {
             if (nivel == INTERMEDIARIO) {
                 setNivelAtual(INTERMEDIARIO);
                 qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
+                linhaMax = MAX_LIN_INTERMEDIARIO;
                 colunaMax = MAX_COL_INTERMEDIARIO;
                 qtdPecasPorImg = 2;
 
@@ -117,6 +119,7 @@ public class JogoMemoriaCtrl {
                 if (nivel == DIFICIL) {
                     setNivelAtual(DIFICIL);
                     qtdImgsPartida = QTDE_IMGS_DIFICIL;
+                    linhaMax = MAX_LIN_DIFICIL;
                     colunaMax = MAX_COL_DIFICIL;
                     qtdPecasPorImg = 3;
 
@@ -193,7 +196,7 @@ public class JogoMemoriaCtrl {
             int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
             achou = false;
             for (int k = 0; k < qtdeSorteadas; k++) {
-                if (imgsPartida[k] == 1) {
+                if (imgsPartida[k] == i) {
                     achou = true;
                     break;
                 }
@@ -237,13 +240,13 @@ public class JogoMemoriaCtrl {
                 p.setIdImagem(imgsPartida[i]);
                 p.setVirado(false);
 
-                boolean sucesso = true;
+                boolean sucesso = false;
                 int l;
                 int c;
 
                 while (!sucesso) {
-                    l = obterNumSorteado(0, linhaMax);
-                    c = obterNumSorteado(0, colunaMax);
+                    l = obterNumSorteado(0, linhaMax-1);
+                    c = obterNumSorteado(0, colunaMax-1);
                     if (getTabuleiro()[l][c] == null) {
                         p.setLinha(l);
                         p.setColuna(c);
