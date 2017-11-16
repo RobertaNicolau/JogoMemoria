@@ -189,7 +189,7 @@ public class JPanelFacil extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblImg01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg01MouseClicked
-       ImageIcon imgIc = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd2.jpeg"));
+       ImageIcon imgIc = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd2.jpg"));
         getLblImg01().setIcon(imgIc);
     }//GEN-LAST:event_lblImg01MouseClicked
 

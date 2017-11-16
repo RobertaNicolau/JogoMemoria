@@ -128,7 +128,7 @@ public class JogoMemoriaCtrl {
 
         preencherTabuleiro();
 
-        limparTabuleiro();
+
     }
 
     /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
@@ -199,8 +199,8 @@ public class JogoMemoriaCtrl {
                 }
             }
             if (!achou) {
-                imgsPartida[qtdImgsPartida] = i;
-                qtdImgsPartida++;
+                imgsPartida[qtdeSorteadas] = i;
+                qtdeSorteadas++;
             }
         }
     }

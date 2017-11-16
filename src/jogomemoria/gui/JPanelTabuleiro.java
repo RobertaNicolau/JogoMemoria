@@ -20,7 +20,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         initComponents();
     }
     
-    public JSplitPane getSPPTabuleiro() {
+    public JSplitPane getsppTabuleiro() {
     return sppTabuleiro;
 }
 
