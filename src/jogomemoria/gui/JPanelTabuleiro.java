@@ -5,7 +5,7 @@
  */
 package jogomemoria.gui;
 
-import javax.swing.JSplitPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -20,9 +20,9 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         initComponents();
     }
     
-    public JSplitPane getsppTabuleiro() {
-    return sppTabuleiro;
-}
+    public void setTabuleiroNivel(JPanel pnl) {
+        sppTabuleiro.setRightComponent(pnl);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,13 +34,18 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     private void initComponents() {
 
         sppTabuleiro = new javax.swing.JSplitPane();
+        jPanelInfos1 = new jogomemoria.gui.JPanelInfos();
 
         setLayout(new java.awt.BorderLayout());
+
+        sppTabuleiro.setLeftComponent(jPanelInfos1);
+
         add(sppTabuleiro, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private jogomemoria.gui.JPanelInfos jPanelInfos1;
     private javax.swing.JSplitPane sppTabuleiro;
     // End of variables declaration//GEN-END:variables
 }
