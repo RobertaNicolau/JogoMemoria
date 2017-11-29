@@ -16,11 +16,13 @@ import jogomemoria.model.PecaTabuleiro;
  * @author Aluno
  */
 public class JPanelFacil extends javax.swing.JPanel {
+
     private JogoMemoriaCtrl controle;
-    
+
     PecaTabuleiro ptSel1;
     PecaTabuleiro ptSel2;
     int pecasSelecionadas = 0;
+
     /**
      * Creates new form JPanelFacil
      */
@@ -28,173 +30,170 @@ public class JPanelFacil extends javax.swing.JPanel {
         initComponents();
         controle = ctrl;
     }
-    
-    public void mostrar(boolean inicioJogo){
+
+    public void mostrar(boolean inicioJogo) {
         PecaTabuleiro pctb[][] = controle.getTabuleiro();
         int idImg;
 
         ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/cartaVirada.jpg"));
-            if (inicioJogo || pctb[0][0].isVirado()) {
-                idImg = pctb[0][0].getIdImagem();
-                ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg00()).setIcon(img00);
-            } else {
-                (getLblImg00()).setIcon(imgDuvida);
-            }
-            if (inicioJogo || pctb[0][1].isVirado()) {
-                idImg = pctb[0][1].getIdImagem();
-                ImageIcon img01 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg01()).setIcon(img01);
-            } else {
-                (getLblImg01()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[0][2].isVirado()) {
-                idImg = pctb[0][2].getIdImagem();
-                ImageIcon img02 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg02()).setIcon(img02);
-            } else {
-                (getLblImg02()).setIcon(imgDuvida);
-            }
-            if (inicioJogo || pctb[0][3].isVirado()) {
-                idImg = pctb[0][3].getIdImagem();
-                ImageIcon img03 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg03()).setIcon(img03);
-            } else {
-                (getLblImg03()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[1][0].isVirado()) {
-                idImg = pctb[1][0].getIdImagem();
-                ImageIcon img10 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg10()).setIcon(img10);
-            } else {
-                (getLblImg10()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[1][1].isVirado()) {
-                idImg = pctb[1][1].getIdImagem();
-                ImageIcon img11 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg11()).setIcon(img11);
-            } else {
-                (getLblImg11()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[1][2].isVirado()) {
-                idImg = pctb[1][2].getIdImagem();
-                ImageIcon img12 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg12()).setIcon(img12);
-            } else {
-                (getLblImg12()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[1][3].isVirado()) {
-                idImg = pctb[1][3].getIdImagem();
-                ImageIcon img13 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg13()).setIcon(img13);
-            } else {
-                (getLblImg13()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[2][0].isVirado()) {
-                idImg = pctb[2][0].getIdImagem();
-                ImageIcon img20 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg20()).setIcon(img20);
-            } else {
-                (getLblImg20()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[2][1].isVirado()) {
-                idImg = pctb[2][1].getIdImagem();
-                ImageIcon img21 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg21()).setIcon(img21);
-            } else {
-                (getLblImg21()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[2][2].isVirado()) {
-                idImg = pctb[2][2].getIdImagem();
-                ImageIcon img22 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg22()).setIcon(img22);
-            } else {
-                (getLblImg22()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[2][3].isVirado()) {
-                idImg = pctb[2][3].getIdImagem();
-                ImageIcon img23 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg23()).setIcon(img23);
-            } else {
-                (getLblImg23()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[3][0].isVirado()) {
-                idImg = pctb[3][0].getIdImagem();
-                ImageIcon img30 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg30()).setIcon(img30);
-            } else {
-                (getLblImg30()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[3][1].isVirado()) {
-                idImg = pctb[3][1].getIdImagem();
-                ImageIcon img31 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg31()).setIcon(img31);
-            } else {
-                (getLblImg31()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[3][2].isVirado()) {
-                idImg = pctb[3][2].getIdImagem();
-                ImageIcon img32 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg32()).setIcon(img32);
-            } else {
-                (getLblImg32()).setIcon(imgDuvida);
-            }
-
-            if (inicioJogo || pctb[3][3].isVirado()) {
-                idImg = pctb[3][3].getIdImagem();
-                ImageIcon img33 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
-                (getLblImg33()).setIcon(img33);
-            } else {
-                (getLblImg33()).setIcon(imgDuvida);
-            }
-
+        if (inicioJogo || pctb[0][0].isVirado()) {
+            idImg = pctb[0][0].getIdImagem();
+            ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg00()).setIcon(img00);
+        } else {
+            (getLblImg00()).setIcon(imgDuvida);
         }
-    
-    
-    private void tentarJogada(int linha, int coluna, JLabel rotuloImagem){
+        if (inicioJogo || pctb[0][1].isVirado()) {
+            idImg = pctb[0][1].getIdImagem();
+            ImageIcon img01 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg01()).setIcon(img01);
+        } else {
+            (getLblImg01()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[0][2].isVirado()) {
+            idImg = pctb[0][2].getIdImagem();
+            ImageIcon img02 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg02()).setIcon(img02);
+        } else {
+            (getLblImg02()).setIcon(imgDuvida);
+        }
+        if (inicioJogo || pctb[0][3].isVirado()) {
+            idImg = pctb[0][3].getIdImagem();
+            ImageIcon img03 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg03()).setIcon(img03);
+        } else {
+            (getLblImg03()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[1][0].isVirado()) {
+            idImg = pctb[1][0].getIdImagem();
+            ImageIcon img10 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg10()).setIcon(img10);
+        } else {
+            (getLblImg10()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[1][1].isVirado()) {
+            idImg = pctb[1][1].getIdImagem();
+            ImageIcon img11 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg11()).setIcon(img11);
+        } else {
+            (getLblImg11()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[1][2].isVirado()) {
+            idImg = pctb[1][2].getIdImagem();
+            ImageIcon img12 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg12()).setIcon(img12);
+        } else {
+            (getLblImg12()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[1][3].isVirado()) {
+            idImg = pctb[1][3].getIdImagem();
+            ImageIcon img13 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg13()).setIcon(img13);
+        } else {
+            (getLblImg13()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[2][0].isVirado()) {
+            idImg = pctb[2][0].getIdImagem();
+            ImageIcon img20 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg20()).setIcon(img20);
+        } else {
+            (getLblImg20()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[2][1].isVirado()) {
+            idImg = pctb[2][1].getIdImagem();
+            ImageIcon img21 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg21()).setIcon(img21);
+        } else {
+            (getLblImg21()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[2][2].isVirado()) {
+            idImg = pctb[2][2].getIdImagem();
+            ImageIcon img22 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg22()).setIcon(img22);
+        } else {
+            (getLblImg22()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[2][3].isVirado()) {
+            idImg = pctb[2][3].getIdImagem();
+            ImageIcon img23 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg23()).setIcon(img23);
+        } else {
+            (getLblImg23()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[3][0].isVirado()) {
+            idImg = pctb[3][0].getIdImagem();
+            ImageIcon img30 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg30()).setIcon(img30);
+        } else {
+            (getLblImg30()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[3][1].isVirado()) {
+            idImg = pctb[3][1].getIdImagem();
+            ImageIcon img31 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg31()).setIcon(img31);
+        } else {
+            (getLblImg31()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[3][2].isVirado()) {
+            idImg = pctb[3][2].getIdImagem();
+            ImageIcon img32 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg32()).setIcon(img32);
+        } else {
+            (getLblImg32()).setIcon(imgDuvida);
+        }
+
+        if (inicioJogo || pctb[3][3].isVirado()) {
+            idImg = pctb[3][3].getIdImagem();
+            ImageIcon img33 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
+            (getLblImg33()).setIcon(img33);
+        } else {
+            (getLblImg33()).setIcon(imgDuvida);
+        }
+
+    }
+
+    private void tentarJogada(int linha, int coluna, JLabel rotuloImagem) {
         PecaTabuleiro pt[][] = controle.getTabuleiro();
-        
+
         int idImg = pt[linha][coluna].getIdImagem();
-        
-        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd"+idImg+".jpg"));
+
+        ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd" + idImg + ".jpg"));
         rotuloImagem.setIcon(img);
-        
-         if (pecasSelecionadas == 0) {
+
+        if (pecasSelecionadas == 0) {
             ptSel1 = pt[linha][coluna];
-            pecasSelecionadas++;             
+            pecasSelecionadas++;
         } else if (pecasSelecionadas == 1) {
             ptSel2 = pt[linha][coluna];
             int result = controle.realizarJogada(ptSel1, ptSel2);
             if (result == controle.JOGADA_CERTA) {
-                JOptionPane.showMessageDialog(this,"Muito bem!!!","Resultado da jogada",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_ERRADA) {
-                JOptionPane.showMessageDialog(this,"Puts não deu. tente de novo!!!","Resultado da jogada",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
-                JOptionPane.showMessageDialog(this,"Ô meu, se liga!!!","Resultado da jogada",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
             pecasSelecionadas = 0;
             mostrar(false);
-          }
-  
+        }
 
     }
 
     //JPanelFacil(URL resource) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     //}
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -358,12 +357,13 @@ public class JPanelFacil extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblImg01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg01MouseClicked
-       ImageIcon imgIc = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd2.jpg"));
-        getLblImg01().setIcon(imgIc);
+     //  ImageIcon imgIc = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/wd2.jpg"));
+        //   getLblImg01().setIcon(imgIc);
+        tentarJogada(0, 1, lblImg01);
     }//GEN-LAST:event_lblImg01MouseClicked
 
     private void lblImg02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg02MouseClicked
-         tentarJogada(0, 2, lblImg02);
+        tentarJogada(0, 2, lblImg02);
     }//GEN-LAST:event_lblImg02MouseClicked
 
     private void lblImg03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg03MouseClicked
@@ -371,7 +371,7 @@ public class JPanelFacil extends javax.swing.JPanel {
     }//GEN-LAST:event_lblImg03MouseClicked
 
     private void lblImg23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg23MouseClicked
-         tentarJogada(2, 3, lblImg23);                                  
+        tentarJogada(2, 3, lblImg23);
     }//GEN-LAST:event_lblImg23MouseClicked
 
     private void lblImg00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg00MouseClicked
@@ -407,7 +407,7 @@ public class JPanelFacil extends javax.swing.JPanel {
     }//GEN-LAST:event_lblImg31MouseClicked
 
     private void lblImg21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg21MouseClicked
-       tentarJogada(2, 1, lblImg21);
+        tentarJogada(2, 1, lblImg21);
     }//GEN-LAST:event_lblImg21MouseClicked
 
     private void lblImg30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg30MouseClicked
@@ -415,7 +415,7 @@ public class JPanelFacil extends javax.swing.JPanel {
     }//GEN-LAST:event_lblImg30MouseClicked
 
     private void lblImg13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg13MouseClicked
-       tentarJogada(1, 3, lblImg13);
+        tentarJogada(1, 3, lblImg13);
     }//GEN-LAST:event_lblImg13MouseClicked
 
     private void lblImg32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblImg32MouseClicked

@@ -28,7 +28,7 @@ public class JogoMemoriaCtrl {
     public static final int JOGADA_INVALIDA = 2; //Referência a valor que representa jogada inválida. Ou seja, com pelo menos uma posição já ocupada.
 
     public static final int MAX_IMAGENS_PARTIDA = 18; //Máx. de imagens usadas nas partidas
-    public static final int QTDE_IMAGENS_DISPONIVEIS = 20; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
+    public static final int QTDE_IMAGENS_DISPONIVEIS = 19; //Quantidade de imagens disponíveis para o jogo (Sempre maior do que MAX_PECAS_PARTIDA)
 
     public static final int QTDE_IMGS_FACIL = 8; //Referência para a qtde de imagens do tabuleiro para do nível Fácil
     public static final int QTDE_PECAS_TAB_FACIL = 16; //Referência para a qtde de peças do tabuleiro para o nível Fácil
@@ -105,46 +105,48 @@ public class JogoMemoriaCtrl {
         if (nivel == FACIL) {
             setNivelAtual(FACIL);
             qtdImgsPartida = QTDE_IMGS_FACIL;
-            linhaMax = MAX_LIN_FACIL -1;
-            colunaMax = MAX_COL_FACIL -1;
+            linhaMax = MAX_LIN_FACIL - 1;
+            colunaMax = MAX_COL_FACIL - 1;
             qtdPecasPorImg = 2;
         }
         if (nivel == INTERMEDIARIO) {
             setNivelAtual(INTERMEDIARIO);
             qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
-            linhaMax = MAX_LIN_INTERMEDIARIO -1;
-            colunaMax = MAX_COL_INTERMEDIARIO -1;
+            linhaMax = MAX_LIN_INTERMEDIARIO - 1;
+            colunaMax = MAX_COL_INTERMEDIARIO - 1;
             qtdPecasPorImg = 2;
         }
 
         if (nivel == DIFICIL) {
             setNivelAtual(DIFICIL);
             qtdImgsPartida = QTDE_IMGS_DIFICIL;
-            linhaMax = MAX_LIN_DIFICIL -1;
-            colunaMax = MAX_COL_DIFICIL -1;
+            linhaMax = MAX_LIN_DIFICIL - 1;
+            colunaMax = MAX_COL_DIFICIL - 1;
             qtdPecasPorImg = 3;
 
         }
 
         sortearImagensPartida();
-
+        
+        mostrarImgsSorteadas();
+            
         preencherTabuleiro(nivel);
         
+        mostrarTabuleiro();
     }
-        
-        
-        /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
-         que precisam ter seus valores ajustados no ínício de cada partida:
-         - O jogo deve ser sinalizado como iniciado.
-         - O tempo limite em segundos deverá ser definido com base na conversão do parãmetro tempoLimMinutos. 
-         - A quantidade de acertos da partida deve ser iniciado. 
-         - O nível da partida atual (nivelAtual) deve ser definido conforme o parâmetro "nivel".
-         - A quantidade de peças usadas na partida deve ser definida com base na interpretação do nível.
-         - Sortear imagens para a partida.
-         - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
-         - Zerar todo o tabuleiro de controle.
-         */
-        //obtem um nº sorteado e valido no espaço de inicio ate o fim
+
+    /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
+     que precisam ter seus valores ajustados no ínício de cada partida:
+     - O jogo deve ser sinalizado como iniciado.
+     - O tempo limite em segundos deverá ser definido com base na conversão do parãmetro tempoLimMinutos. 
+     - A quantidade de acertos da partida deve ser iniciado. 
+     - O nível da partida atual (nivelAtual) deve ser definido conforme o parâmetro "nivel".
+     - A quantidade de peças usadas na partida deve ser definida com base na interpretação do nível.
+     - Sortear imagens para a partida.
+     - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
+     - Zerar todo o tabuleiro de controle.
+     */
+    //obtem um nº sorteado e valido no espaço de inicio ate o fim
     private int obterNumSorteado(int inicio, int fim) {
 
         int n = INDEFINIDO;
@@ -207,6 +209,13 @@ public class JogoMemoriaCtrl {
         }
     }
 
+    public void mostrarImgsSorteadas() {
+        System.out.println(">>>> Imagens da partida: ");
+        for (int i = 0; i < qtdImgsPartida; i++) {
+            System.out.print((imgsPartida[i])+ " ");
+        }
+    }
+    
     /**
      * Limpa o vetor de imagens usadas na partida (imgspartida) colocando 0
      * (ZERO) em cada célula e indicando que está vazia. É usado como parte da
@@ -225,7 +234,7 @@ public class JogoMemoriaCtrl {
      * Preenche o tabuleiro com duplas ou trios das imagens sorteadas,
      * dependendo do nível definido para a partida.
      */
-    private void preencherTabuleiro( int nivel) {
+    private void preencherTabuleiro(int nivel) {
 
         int num = 0;
 
@@ -255,7 +264,19 @@ public class JogoMemoriaCtrl {
                 }
             }
         }
+    }
 
+        
+    public void mostrarTabuleiro() {
+        System.out.println("\n>>>> Tabuleiro ");
+        for (int l=0; l<=linhaMax; l++) {
+            for (int c = 0; c <= colunaMax; c++) {
+                System.out.print((tabuleiro[l][c]).getIdImagem()+ " ");
+            }
+            System.out.println();
+        }
+    }
+        
         /*
          ATIVIDADE #4.
          - Limpe o tabuleiro da partida pois ele pode conter dados de
@@ -272,7 +293,7 @@ public class JogoMemoriaCtrl {
          você está processando. Ou seja você deve processa do primeiro até o último elemento.
  
          */
-    }
+    
 
     /**
      * Limpa os tabuleiros (Tabuleiro de imagens e o de controle) colocando 0
@@ -313,8 +334,8 @@ public class JogoMemoriaCtrl {
                 // int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];
                 // int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
                 if ((!pt1.isVirado()) && (!pt2.isVirado())
-                        && (pt1.getIdImagem() == pt2.getIdImagem() 
-                        && (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna())){
+                        && (pt1.getIdImagem() == pt2.getIdImagem()
+                        && (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna())) {
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
                     pt1.setVirado(true);
@@ -373,7 +394,7 @@ public class JogoMemoriaCtrl {
                 if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                         && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)
                         && (pt3.getLinha() <= linhaMax) && (pt3.getColuna() <= colunaMax)) {
-                        // int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];
+                    // int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];
                     // int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];
                     if ((!pt1.isVirado()) && (!pt2.isVirado()) && (!pt3.isVirado())) {
                         resultado = JOGADA_CERTA;
@@ -382,7 +403,7 @@ public class JogoMemoriaCtrl {
                         pt2.setVirado(true);
                         pt3.setVirado(true);
 
-                    // tabControle[pt1.getLinha()][pt1.getColuna()] = 1;
+                        // tabControle[pt1.getLinha()][pt1.getColuna()] = 1;
                         // tabControle[pt2.getLinha()][pt2.getColuna()] = 1;
                     } else {
                         resultado = JOGADA_INVALIDA;
@@ -439,6 +460,38 @@ public class JogoMemoriaCtrl {
      */
     public void setPontuacaoAtual(int pontuacaoAtual) {
         this.pontuacaoAtual = pontuacaoAtual;
+//        tabRecordes[getNivelAtual() - 1][OURO] = pontuacaoAtual;
+    }
+
+    private void inserirRecordes() {
+        int records[][] = {{0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0},};
+
+        records = getTabRecordes();
+        int pontuacao = 0;
+        pontuacao = getPontuacaoAtual();
+        int nivelAtual = getNivelAtual();
+
+        if (records[nivelAtual][OURO] > pontuacao) {
+            records[nivelAtual][OURO] = pontuacao;
+        } else {
+            if (records[nivelAtual][PRATA] > pontuacao) {
+                records[nivelAtual][PRATA] = pontuacao;
+            } else {
+                if (records[nivelAtual][BRONZE] > pontuacao) {
+                    records[nivelAtual][BRONZE] = pontuacao;
+                }
+            }
+        }
+    }
+    
+    private void limpaRecords (){
+        for (int c = 0; c <= 3; c++){
+            for (int l = 0; l <=3; l++){
+            tabRecordes[c][l] = 0;
+        }
+        }
     }
 
     /**
